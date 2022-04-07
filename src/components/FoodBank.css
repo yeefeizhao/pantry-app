@@ -1,0 +1,30 @@
+.col{
+    width: 18rem;
+}
+
+
+
+.card-group{
+    margin-top: 2vh;
+}
+
+.inv {
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+    text-align: center;
+}
+
+.bank-button {
+    width: 5vw;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    color: white;
+    background-color: #0d6efd;
+    margin-bottom: 2vh;
+    margin-right: 1vw
+}

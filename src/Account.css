@@ -1,0 +1,18 @@
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    width: 60vw;
+    margin: 10vh 20vw 0 20vw;
+
+}
+
+.account .title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.account .sub-title {
+    margin-top: 5vh;
+}

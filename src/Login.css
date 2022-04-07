@@ -1,0 +1,16 @@
+.login {
+    height: 100vh;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login_button{
+    margin-bottom: 2vh;
+}
+
+.form-control{
+    width: 10vh;
+}
