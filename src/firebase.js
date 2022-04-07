@@ -5,7 +5,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { doc, collection, getDocs, query, setDoc, where } from 'firebase/firestore';
 
-
+//config for firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCpeVqTNwqDGO9mRZYRd8KFlui8SaXZ4Ik",
     authDomain: "pantry-9ed2a.firebaseapp.com",
@@ -25,6 +25,7 @@ const provider = new firebase.auth.GoogleAuthProvider();
 
 provider.setCustomParameters({ prompt: 'select_account' });
 
+//creates a new food bank by creating a new document in the firebase database
 const addNewPantry = async (name, location, foodList, quantity) => {
   const user = firebase.auth().currentUser;
   const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -40,6 +41,7 @@ const addNewPantry = async (name, location, foodList, quantity) => {
   });
 }
 
+//creates a new user by creating a new document in the firebase database
 const userRegistration = async (name, email, password) => {
   try {
     const res = await auth.createUserWithEmailAndPassword(email, password);
@@ -55,6 +57,7 @@ const userRegistration = async (name, email, password) => {
   }
 };
 
+//logs in a user by using their email and password
 const signInWithEmailAndPassword = async (email, password) => {
   try {
     await auth.signInWithEmailAndPassword(email, password);
@@ -63,6 +66,7 @@ const signInWithEmailAndPassword = async (email, password) => {
   }
 };
 
+//sends password reset email to user
 const resetPassword = async (email) => {
   try {
     await auth.sendPasswordResetEmail(email);
@@ -71,6 +75,7 @@ const resetPassword = async (email) => {
   }
 };
 
+//logs user out
 const logout = () => {
   auth.signOut();
 };

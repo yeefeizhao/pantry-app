@@ -14,13 +14,17 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
   const [newFoodList, setNewFoodList] = useState(foodList);
   const navigate = useNavigate();
 
+  //runs on load
   useEffect(() => {
+    //sets whether the user owns the food bank
     if (!user) setOwned(false);
     else if (user.uid === uid) setOwned(true);
     
   }, [user, uid])
 
+  //update the food bank in firebase
   const updateBank = async () => {
+    //catches for if fields are not filled out
     if (newLocation.length === 0) setNewLocation(location);
     if (newQuantity.length === 0) setNewQuantity(quantity);
     if (newFoodList.length === 0) setNewFoodList(foodList);
@@ -34,6 +38,7 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
     navigate('/');
   } 
   
+  //delete the food bank from firebase
   const deleteBank = async () => {
     const docRef = doc(db, 'banks', name);
     await deleteDoc(docRef);
@@ -41,16 +46,14 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
   }
 
   return (
+    //if currently editing return this form
     editing ? 
       <div className="foodbank container">
 
-
         <div className="card-group">
-
           <div className="card border-primary mb-3">
             <div className="card-body">
               <h5 className="card-title">{name}</h5>
-
               <input type='text' className='textbox' value={newLocation} onChange={e => setNewLocation(e.target.value)} placeholder='Address'/>
               <p className="card-text">Made By: {owner}</p>
             </div>
@@ -59,19 +62,14 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
           <div className="card border-primary mb-3">
             <p className="inv">Needed Materials</p>
             <ul className="list-group list-group-flush" id = "invlist">
-              
               <input type='text' className='textbox' value={newFoodList} onChange={e => setNewFoodList(e.target.value)} placeholder='Requested Items'/>
-              
-              
             </ul>
           </div>
 
           <div className="card border-primary mb-3">
             <p className="inv">Quantity</p>
             <ul className="list-group list-group-flush" id = "foodlist">
-              
               <input type='text' className='textbox' value={newQuantity} onChange={e => setNewQuantity(e.target.value)} placeholder='Quantity'/>
-          
             </ul>
           </div>
 
@@ -81,7 +79,7 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
       </div>
 
     : 
-
+      //if not editing return this form
       <div className="foodbank container">
         <div className="card-group">
 
@@ -96,27 +94,25 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
           <div className="card border-primary mb-3">
             <p className="inv">Needed Materials</p>
             <ul className="list-group list-group-flush" id = "invlist">
-              
-
+              {/* shows top three requested items */}
               <li className="list-group-item">{foodList.split(',')[0]}</li>
               <li className="list-group-item">{foodList.split(',')[1]}</li>
               <li className="list-group-item">{foodList.split(',')[2]}</li>
-              
-              
             </ul>
           </div>
 
           <div className="card border-primary mb-3">
             <p className="inv">Quantity</p>
             <ul className="list-group list-group-flush" id = "foodlist">
-              
+              {/* shows quantities for top three requested items */}
               <li className="list-group-item">{quantity.split(',')[0]}</li>
               <li className="list-group-item">{quantity.split(',')[1]}</li>
               <li className="list-group-item">{quantity.split(',')[2]}</li>
-          
             </ul>
           </div>
+
         </div>
+        {/* hide this button if the user is not the owner */}
         <button className='bank-button' hidden={owned ? '' : 'hidden'} onClick={() => setEditing(true)}>Edit</button>
     </div>
   )

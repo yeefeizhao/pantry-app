@@ -17,6 +17,7 @@ function UpdateAccount() {
     const [validEmail, setValidEmail] = useState(false);
     const navigate = useNavigate();
 
+    //checks whether the email is valid
     const handleEmail = (email) => {
         setNewEmail(email);
 
@@ -29,6 +30,7 @@ function UpdateAccount() {
     
 
     useEffect(() => {
+        //sets current users name and email from firebase
         const fetchUserName = async () => {
             try {
                 const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -38,7 +40,6 @@ function UpdateAccount() {
                 setCurrentEmail(data.email);
             } catch (err) {
                 console.error(err);
-                alert("An error occured while fetching user data");
             }
         }
 
@@ -53,12 +54,13 @@ function UpdateAccount() {
 
             <div className='form'>
                 <input type='text' className='textbox' value={newName} onChange={e => setNewName(e.target.value)} placeholder={currentName}/>
+                {/* show button only if there is a names entered */}
                 <button className='button' hidden={newName ? '' : 'hidden'} >Change Name</button>
             </div>
             
             <div className='form'>
-                {/* remember to add email validator when changing emails */}
                 <input type='text' className='textbox' value={newEmail} onChange={e => handleEmail(e.target.value)} placeholder={currentEmail}/>
+                {/* show button only if there is a valid email entered */}
                 <button className='button' hidden={(newEmail && validEmail) ? '' : 'hidden'} >Change Email</button>
             </div>
             <button className='button' onClick={logout}>Log Out</button>

@@ -13,6 +13,7 @@ function Account() {
     const [banks, setBanks] = useState([]);
     const [user, loading] = useAuthState(auth);
     
+    //runs on load and every time the user changes
     useEffect(() => {
         const getUserBanks = async () => {
             try {
@@ -35,12 +36,14 @@ function Account() {
             <div>
                 <h2 className='title'>Account</h2>
 
+                <hr/>
                 <div>
                     <UpdateAccount />
                 </div>
-
+                <hr/>
                 <div>
                     <h3 className='sub-title'>Your Locations</h3>
+                    {/* creates a new food bank for each bank from firebase */}
                     {banks?.map((bank, index) => (
                         <FoodBank className='bank'
                             key={index}

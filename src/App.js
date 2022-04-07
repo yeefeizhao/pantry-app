@@ -11,6 +11,7 @@ import Map from './components/Map';
 
 function App() {
   return (
+    //creates all of the paths to each component
     <Router>
       <Header />
       <Routes>
@@ -22,7 +23,6 @@ function App() {
         <Route path='/account' element = {<Account />}/>
         <Route path='/map' element = {<Map />}/>
       </Routes>
-      
     </Router>
   );
 }

@@ -13,12 +13,13 @@ function Map() {
     const [activeMarker, setActiveMarker] = useState(null);
     const [banks, setBanks] = useState([]);
 
-    
+    //style for google map
     const containerStyle = {
         height: '93.3vh', 
         width: '75vw'
     }
 
+    //prompts user to allow access to their location and sets center to their location
     const getUserPosition = () => {
         navigator.geolocation.getCurrentPosition(function(position) {
             //console.log(position.coords.latitude, position.coords.longitude);
@@ -29,6 +30,7 @@ function Map() {
         });
     }
 
+    //uses google maps geocoding api to convert address to lat/lng and stores it in allCoords
     const geocode = (address) => {
         const uri = address;
         const encoded = encodeURI(uri);
@@ -39,8 +41,9 @@ function Map() {
         })
     }
     
+    //runs on load
     useEffect(() => {
-
+        //gets all banks from firebase
         const getBankAddresses = async () => {
             try {
                 const q = query(collection(db, 'banks'));
@@ -68,8 +71,7 @@ function Map() {
                 
                 <div className='map-container'>
                     <LoadScript
-                        googleMapsApiKey="AIzaSyCpeVqTNwqDGO9mRZYRd8KFlui8SaXZ4Ik"
-                        
+                        googleMapsApiKey="AIzaSyCpeVqTNwqDGO9mRZYRd8KFlui8SaXZ4Ik"    
                     >
                         <GoogleMap
                             mapContainerStyle={containerStyle}
@@ -77,6 +79,7 @@ function Map() {
                             zoom={12}
                             disableDefaultUI={true}
                         >
+                            {/* creates a marker for each coordinate */}
                             {allCoords?.map((coord, index) => (
                                 <Marker key={index} position={coord} onClick={() => setActiveMarker(true)}>
                                     {activeMarker ?

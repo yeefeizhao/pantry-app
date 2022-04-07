@@ -14,6 +14,7 @@ function NewPantry() {
     const [location, setLocation] = useState('');
     const navigate = useNavigate();
 
+    //runs every time any of the address components change
     useEffect(() => { 
         setLocation(add1 + ', ' + city + ', ' + state + ' ' + zip );
     }, [add1, city, state, zip]);

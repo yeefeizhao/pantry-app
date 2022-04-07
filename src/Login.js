@@ -22,15 +22,15 @@ function Login() {
       
           <h2>Login</h2>
         
-        <div className="mb-2 mt-2">
-            <input className = "form-control" type='text' value={email} onChange={e => setEmail(e.target.value)} placeholder='Email Address'/>
-        </div>
+          <div className="mb-2 mt-2">
+              <input className = "form-control" type='text' value={email} onChange={e => setEmail(e.target.value)} placeholder='Email Address'/>
+          </div>
 
-        <div className="mb-2">
-          <input className= "form-control" type='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' />
-        </div> 
+          <div className="mb-2">
+            <input className= "form-control" type='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='Password' />
+          </div> 
 
-        <button onClick={() => signInWithEmailAndPassword(email, password)} id = "login_button" className="btn btn-outline-primary">Log In</button>
+          <button onClick={() => signInWithEmailAndPassword(email, password)} id = "login_button" className="btn btn-outline-primary">Log In</button>
           
 
 
@@ -39,12 +39,8 @@ function Login() {
           </div>
 
           <div>
-            <Link className = 'link' to="/reset">Forgot Password?</Link>
+              <Link className = 'link' to="/reset">Forgot Password?</Link>
           </div>
-
-          
-
-
       </div>
   )
 }

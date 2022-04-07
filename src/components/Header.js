@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 
 function Header() {
+  //gets the current user
   const [user] = useAuthState(auth);
 
   return (
