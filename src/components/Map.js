@@ -34,7 +34,7 @@ function Map() {
     const geocode = (address) => {
         const uri = address;
         const encoded = encodeURI(uri);
-        const endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encoded +'&key=AIzaSyCpeVqTNwqDGO9mRZYRd8KFlui8SaXZ4Ik'
+        const endpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encoded +'&key=' + process.env.REACT_APP_API_KEY;
         axios.get(endpoint).then(response => {
             const coords = response.data.results[0].geometry.location;
             setAllCoords(allCoords => [...allCoords, coords]);
@@ -71,7 +71,7 @@ function Map() {
                 
                 <div className='map-container'>
                     <LoadScript
-                        googleMapsApiKey="AIzaSyCpeVqTNwqDGO9mRZYRd8KFlui8SaXZ4Ik"    
+                        googleMapsApiKey={process.env.REACT_APP_API_KEY}
                     >
                         <GoogleMap
                             mapContainerStyle={containerStyle}

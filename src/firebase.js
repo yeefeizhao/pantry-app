@@ -7,13 +7,13 @@ import { doc, collection, getDocs, query, setDoc, where } from 'firebase/firesto
 
 //config for firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyCpeVqTNwqDGO9mRZYRd8KFlui8SaXZ4Ik",
-    authDomain: "pantry-9ed2a.firebaseapp.com",
-    projectId: "pantry-9ed2a",
-    storageBucket: "pantry-9ed2a.appspot.com",
-    messagingSenderId: "983976649962",
-    appId: "1:983976649962:web:eea94a444b768e2befe393",
-    measurementId: "G-L72Q2YHSTQ"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 const app = firebase.initializeApp(firebaseConfig);
