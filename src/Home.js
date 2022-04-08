@@ -26,8 +26,8 @@ function Home() {
             <h4 className="card-title home-title">Donamus’s Goal</h4>
             <p className="card-text">Donamus is the Latin word used for “We Give.” Our goal is to make donations more widespread and accessible by centralizing donation 
             requests into one, easy-to-read website. Whether it would be a food bank, homeless shelter, or soup kitchen, donations are important to help 
-            lower income families and individuals. Donamus helps users identify where their extra supplies can go in order to help better their community. 
-            Users will be able to view the listings that administrators of organizations make.</p>
+            lower income families and individuals. Donamus helps website visitors identify where their extra supplies can go in order to help better their community. 
+            Website visitors will be able to view the listings that administrators of organizations make.</p>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ function Home() {
               <div className="card-body">
                 <h5 className="card-title">Request Listings</h5>
                 <p className="card-text">The Request Listings page helps to organize the donation requests from locations. 
-            Users can search materials needed by different sites and gather information about 
+            Website visitors can search materials needed by different sites and gather information about 
             the location including the address of the location, contact information, and quantity 
             of the requested items.</p>
                 <Link to="/banks" className="btn btn-primary home-button">Go to Request Listings</Link>
@@ -52,7 +52,7 @@ function Home() {
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">Map</h5>
-                <p className="card-text">The Map page helps users to identify locations near them that have listings on the website. These points will be listed on the map.</p>
+                <p className="card-text">The Map page helps website visitors to identify locations near them that have listings on the website. These points will be listed on the map.</p>
                 <Link to="/map" className="btn btn-primary home-button">Go to Map</Link>
               </div>
             </div>
@@ -62,7 +62,7 @@ function Home() {
               <div className="card-body">
                 <h5 className="card-title">Login and Account</h5>
                   <p className="card-text">
-                    The Login and Account page is where administrators of certain organizations can post their donation requests on the webpage. A user does not need to sign up for an account to view locations.
+                    The Login and Account page is where administrators of certain organizations can post their donation requests on the webpage. A website visitor does not need to sign up for an account to view locations.
                   </p>
                 <Link to="/login" className="btn btn-primary home-button">Go to Login and Account</Link>
               </div>

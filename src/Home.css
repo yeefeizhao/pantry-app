@@ -11,9 +11,6 @@ body {
     margin-top: 4vh;
     /*align-items: center;
     justify-content: center;*/
- 
-    
-    
 }
 
 .text {
@@ -28,7 +25,6 @@ body {
     overflow: hidden;
     position: relative;
     text-align: center;
-
 }
 
 .landing_image {
@@ -65,8 +61,6 @@ body {
 #desc{
     width: 75%;
     margin-top: 8vh;   
-    
-    
 }
 
 #desc, .card {
