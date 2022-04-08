@@ -11,10 +11,15 @@
 .inv {
     text-align: center;
     font-weight: bold;
+    padding: 0;
 }
 
 ul {
     text-align: center;
+}
+
+.card {
+    border: solid 1px #3d348b !important;
 }
 
 .bank-button {
@@ -24,7 +29,7 @@ ul {
     font-size: 15px;
     border: none;
     color: white;
-    background-color: #0d6efd;
+    background-color: #F7B801;
     margin-bottom: 2vh;
     margin-right: 1vw
 }

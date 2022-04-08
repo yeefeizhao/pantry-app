@@ -9,8 +9,16 @@
 
 #login_button{
     margin-bottom: 2vh;
+    border-color: #7678ED !important;
+    color: #7678ED !important;
+}
+
+#login_button:hover {
+    background-color: #7678ED !important;
+    color: white !important;
 }
 
 .form-control{
     width: 10vh;
 }
+

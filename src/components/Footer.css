@@ -1,0 +1,12 @@
+#foot{
+    background-color: #3D348B;
+    color: white;
+    bottom: 0;
+    position: sticky;
+    max-width: 100vw;
+    font-size: 14px;
+}
+
+div a {
+    color: #7678ED;
+}

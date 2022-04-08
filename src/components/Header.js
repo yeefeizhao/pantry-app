@@ -12,7 +12,7 @@ function Header() {
   return (
     
     <div id='scanfcode' className='header'>
-      <nav className="navbar navbar-dark bg-primary fixed-top navbar-expand-lg px-4 pt-2">
+      <nav className="navbar fixed-top navbar-expand-lg px-4 pt-2">
         <div className="container-fluid">
           <Link id = 'title' className="navbar-brand mb-0 ml-3 h1 pt-2" to="/">Donamus</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

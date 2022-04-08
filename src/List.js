@@ -23,11 +23,11 @@ function List() {
 
     //filters out banks that don't match the search
     const filterPosts = (search) => {
-            banks.forEach(bank => {
-                if (bank.foodList.includes(search)) {
-                    setBanks(banks.filter(bank => bank.foodList.includes(search)))
-                }
-            })
+        banks.forEach(bank => {
+            if (bank.foodList.includes(search)) {
+                setBanks(banks.filter(bank => bank.foodList.includes(search)))
+            }
+        })
     }
 
     //gets all banks from firebase

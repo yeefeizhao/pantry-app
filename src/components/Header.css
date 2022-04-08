@@ -26,12 +26,21 @@
     text-transform: uppercase;
     border: double 2px white;
     padding: 3px 20px;
+    color: white;
 }
 
 #logbut{
     color: white;
-    background-color: #6495ED;
+    background-color: #3D348B;
     
+}
+
+.navbar{
+    background-color: #7678ED;
+}
+
+nav .navbar-nav li a{
+    color: white !important;
 }
 
 

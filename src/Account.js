@@ -43,6 +43,8 @@ function Account() {
                 <hr/>
                 <div>
                     <h3 className='sub-title'>Your Locations</h3>
+                    <br/>
+                    <hr/>
                     {/* creates a new food bank for each bank from firebase */}
                     {banks?.map((bank, index) => (
                         <FoodBank className='bank'

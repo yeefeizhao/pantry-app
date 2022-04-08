@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 function UpdateAccount() {
     const [newEmail, setNewEmail] = useState('');
     const [newName, setNewName] = useState('');
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const [currentName, setCurrentName] = useState('');
     const [currentEmail, setCurrentEmail] = useState('');
     const [validEmail, setValidEmail] = useState(false);
@@ -35,24 +35,22 @@ function UpdateAccount() {
             try {
                 const q = query(collection(db, "users"), where("uid", "==", user?.uid));
                 const doc = await getDocs(q);
-                const data = doc.docs[0].data();
-                setCurrentName(data.user);
-                setCurrentEmail(data.email);
+                setCurrentName(doc.docs[0].data().user);
+                setCurrentEmail(doc.docs[0].data().email);
             } catch (err) {
                 console.error(err);
             }
         }
 
-        if (loading) return;
-        if(!user) navigate('/');
+        if(!user) navigate('/'); //if no user send to hompage 
         fetchUserName();
-    }, [user, loading, navigate]);
+    }, [user, navigate]);
 
     return (
         <div className='update-account'>
             <h3>Update Account Information</h3>
 
-            <div className='form'>
+            <div className='form'>  
                 <input type='text' className='textbox' value={newName} onChange={e => setNewName(e.target.value)} placeholder={currentName}/>
                 {/* show button only if there is a names entered */}
                 <button className='button' hidden={newName ? '' : 'hidden'} >Change Name</button>

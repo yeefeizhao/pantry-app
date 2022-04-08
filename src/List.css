@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 86%;
     margin: 5% 7% 0 7%;
+    text-transform: capitalize;
 }
 
 body {

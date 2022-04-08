@@ -82,7 +82,7 @@ function Map() {
                             {/* creates a marker for each coordinate */}
                             {allCoords?.map((coord, index) => (
                                 <Marker key={index} position={coord} onClick={() => setActiveMarker(true)}>
-                                    {activeMarker ?
+                                    {/*{activeMarker ?
                                     <InfoWindow
                                         position={coord}  
                                         onCloseClick={() => setActiveMarker(false)}
@@ -90,7 +90,7 @@ function Map() {
                                         <div style={{ background: "white" }}>
                                             <h1>{banks[index].name}</h1>
                                         </div>
-                                    </InfoWindow> : <></>}
+                                    </InfoWindow> : <></>}*/}
                                 </Marker>
                             ))}
                         </GoogleMap>

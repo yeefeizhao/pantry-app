@@ -13,7 +13,7 @@
 
 button[disabled=disabled], button:hover:disabled {
     color: white;
-    background-color: #FFCD01;
+    background-color: #F35B04;
 }
 
 .textbox {
@@ -29,5 +29,5 @@ button[disabled=disabled], button:hover:disabled {
     margin-bottom: 10px;
     border: none;
     color: white;
-    background-color: #0d6efd;
+    background-color: #F7B801;
 }

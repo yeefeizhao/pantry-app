@@ -25,9 +25,6 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
   //update the food bank in firebase
   const updateBank = async () => {
     //catches for if fields are not filled out
-    if (newLocation.length === 0) setNewLocation(location);
-    if (newQuantity.length === 0) setNewQuantity(quantity);
-    if (newFoodList.length === 0) setNewFoodList(foodList);
     const docRef = doc(db, 'banks', name);
     await setDoc(docRef, {
       location: newLocation,
@@ -83,7 +80,7 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
       <div className="foodbank container">
         <div className="card-group">
 
-          <div className="card border-primary mb-3">
+          <div className="card mb-3">
             <div className="card-body">
               <h5 className="card-title">{name}</h5>
               <h6 className="card-subtitle mb-2 text-muted">{location}</h6>
@@ -91,7 +88,7 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
             </div>
           </div>
 
-          <div className="card border-primary mb-3">
+          <div className="card mb-3">
             <p className="inv">Needed Materials</p>
             <ul className="list-group list-group-flush" id = "invlist">
               {/* shows top three requested items */}
@@ -101,7 +98,7 @@ function FoodBank({ uid, owner, name, location, foodList, quantity}) {
             </ul>
           </div>
 
-          <div className="card border-primary mb-3">
+          <div className="card mb-3">
             <p className="inv">Quantity</p>
             <ul className="list-group list-group-flush" id = "foodlist">
               {/* shows quantities for top three requested items */}

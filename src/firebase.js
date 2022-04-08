@@ -21,10 +21,6 @@ const auth = app.auth();
 const db = app.firestore();
 //const timestamp = firebase.firestore.Timestamp.now().seconds;
 
-const provider = new firebase.auth.GoogleAuthProvider();
-
-provider.setCustomParameters({ prompt: 'select_account' });
-
 //creates a new food bank by creating a new document in the firebase database
 const addNewPantry = async (name, location, foodList, quantity) => {
   const user = firebase.auth().currentUser;
