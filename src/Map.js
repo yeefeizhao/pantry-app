@@ -82,8 +82,8 @@ function Map() {
         //gets all banks from firebase and then geocodes their address to get their lat/lng
         const getBankAddresses = async () => {
             try {
-                const q = query(collection(db, "banks"));
-                const snapshot = await getDocs(q);
+                const quer = query(collection(db, "banks"));
+                const snapshot = await getDocs(quer);
                 //setBanks(snapshot.docs.map(doc => doc.data()));
                 snapshot.forEach((doc) => {
                     geocode(doc.data().location);
