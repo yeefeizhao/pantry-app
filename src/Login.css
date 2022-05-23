@@ -7,18 +7,17 @@
     justify-content: center;
 }
 
-#login_button{
+#login_button {
     margin-bottom: 2vh;
-    border-color: #7678ED !important;
-    color: #7678ED !important;
+    border-color: #7678ed !important;
+    color: #7678ed !important;
 }
 
 #login_button:hover {
-    background-color: #7678ED !important;
+    background-color: #7678ed !important;
     color: white !important;
 }
 
-.form-control{
+.form-control {
     width: 10vh;
 }
-

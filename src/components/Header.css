@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
 
 .header {
     padding: 0vh;
@@ -11,38 +11,32 @@
     margin-right: 5%;
 }
 
-#scanfcode
-{
-  border-radius:0px;
-  background:#fff;
-  padding:10px;
-  font-size:17px;
+#scanfcode {
+    border-radius: 0px;
+    background: #fff;
+    padding: 10px;
+    font-size: 17px;
 }
 
-#title{
+#title {
     padding-left: 0%;
     font-size: 2rem;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
     text-transform: uppercase;
     border: double 2px white;
     padding: 3px 20px;
     color: white;
 }
 
-#logbut{
+#logbut {
     color: white;
-    background-color: #3D348B;
-    
+    background-color: #3d348b;
 }
 
-.navbar{
-    background-color: #7678ED;
+.navbar {
+    background-color: #7678ed;
 }
 
-nav .navbar-nav li a{
+nav .navbar-nav li a {
     color: white !important;
 }
-
-
-
-

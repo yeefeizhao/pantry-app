@@ -1,12 +1,12 @@
-.col{
+.col {
     width: 18rem;
 }
 
-.card-group{
+.card-group {
     margin-top: 2vh;
 }
 
-.inv {
+.columnTitle {
     text-align: center;
     font-weight: bold;
     padding: 0;
@@ -27,7 +27,7 @@ ul {
     font-size: 15px;
     border: none;
     color: white;
-    background-color: #F7B801;
+    background-color: #f7b801;
     margin-bottom: 2vh;
-    margin-right: 1vw
+    margin-right: 1vw;
 }

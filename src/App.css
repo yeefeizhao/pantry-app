@@ -1,22 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=PT+Sans&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=PT+Sans&display=swap%27");
+/*
+Google Fonts 
+Description: Open-source fonts from google 
+Author / Owner (s): Google 
+Usage: Fonts used on website 
+Online Link: https://fonts.google.com/about 
+*/
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: 'Exo 2', 'PT Sans' sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", "PT Sans" sans-serif;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: black;
+    background: black;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
 }
-
-
-

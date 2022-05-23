@@ -1,7 +1,6 @@
 .pantry {
     display: flex;
     flex-direction: column;
-    
 }
 
 .line2 {
@@ -11,17 +10,18 @@
     align-items: center;
 }
 
-button[disabled=disabled], button:hover:disabled {
+button[disabled="disabled"],
+button:hover:disabled {
     color: white;
-    background-color: #F35B04;
+    background-color: #f35b04;
 }
 
 .textbox {
     padding: 10px;
     font-size: 18px;
     margin-bottom: 10px;
-  }
-  
+}
+
 .button {
     width: 15vw;
     padding: 10px;
@@ -29,5 +29,5 @@ button[disabled=disabled], button:hover:disabled {
     margin-bottom: 10px;
     border: none;
     color: white;
-    background-color: #F7B801;
+    background-color: #f7b801;
 }

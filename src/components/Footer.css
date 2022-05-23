@@ -1,12 +1,13 @@
-#foot{
-    background-color: #3D348B;
+#footerDesc {
+    background-color: #3d348b;
     color: white;
     bottom: 0;
     position: sticky;
     max-width: 100vw;
     font-size: 14px;
+    text-align: center;
 }
 
 div a {
-    color: #7678ED;
+    color: #7678ed;
 }
