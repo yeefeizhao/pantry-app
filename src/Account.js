@@ -73,6 +73,7 @@ function Account() {
                             location={bank.location}
                             quantity={bank.quantity}
                             foodList={bank.foodList}
+                            account={true}
                         />
                     ))}
                 </div>

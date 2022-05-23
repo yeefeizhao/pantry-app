@@ -41,8 +41,8 @@ function AllBanks() {
     //gets all banks from firebase
     const getBanks = async () => {
         try {
-            const q = query(collection(db, "banks"));
-            const snapshot = await getDocs(q);
+            const quer = query(collection(db, "banks")); 
+            const snapshot = await getDocs(quer);
             setBanks(snapshot.docs.map((doc) => doc.data()));
         } catch (err) {
             console.error(err);
@@ -74,10 +74,10 @@ function AllBanks() {
                         location={bank.location}
                         quantity={bank.quantity}
                         foodList={bank.foodList}
+                        account={false}
                     />
                 </div>
             ))}
-            <div>{/* <Footer /> */}</div>
         </div>
     );
 }

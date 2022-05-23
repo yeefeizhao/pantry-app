@@ -20,7 +20,7 @@ Other Information: License: https://github.com/csfrequency/react-firebase-hooks/
 import { auth, db } from "../firebase";
 import "./FoodBank.css";
 
-function FoodBank({ uid, owner, name, location, foodList, quantity }) {
+function FoodBank({ uid, owner, name, location, foodList, quantity, account }) {
     const [editing, setEditing] = useState(false); //state for whether to display input fields or not
     const [owned, setOwned] = useState(false); //state for whether the current user's uid matches the foodbanks uid, if it does then set owned to true and the edit button it visible
     const [user] = useAuthState(auth); //used to get the current user
@@ -162,7 +162,7 @@ function FoodBank({ uid, owner, name, location, foodList, quantity }) {
                 //if owned is set to false, then hide this button, meaning they do not own this food bank and cannot edit
                 <button
                     className="bank-button"
-                    hidden={owned ? "" : "hidden"}
+                    hidden={(owned && account) ? "" : "hidden"}
                     onClick={() => setEditing(true)}
                 >
                     Edit
