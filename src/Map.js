@@ -12,11 +12,18 @@ import AllBanks from "./AllBanks";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 /*
 React Google Maps 
-Description: Open Source Code package on NPM
+Description: Open-Source Code package on NPM
 Author / Owner (s): Alexey Lyakhov, Uri Klar 
 Usage: Used for implementing map on the maps page 
 Online Download Link: https://www.npmjs.com/package/@react-google-maps/api
 Other Information: Free to use under MIT License https://opensource.org/licenses/MIT
+
+Google Maps 
+Description: Open Source Online Map Service by Google that developers can use 
+Author / Owner (s): Google 
+Usage: Used to display Locations on a map 
+Online Link: https://developers.google.com/maps
+Open Source: https://developers.google.com/maps/documentation/javascript/libraries-open-source
 */
 import { db } from "./firebase";
 import "./Map.css";
@@ -39,7 +46,7 @@ function Map() {
     //sets the height and width of the map - this is a required paramter
     const mapContainerStyle = {
         height: "93.3vh",
-        width: "75vw",
+        width: "60vw",
     };
 
     //prompts user to allow access to their location and sets center to their location

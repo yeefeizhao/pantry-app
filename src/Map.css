@@ -13,7 +13,7 @@
 
 .list-container {
     max-height: 93.3vh;
-    min-width: 28vw;
+    min-width: 40vw;
     overflow-y: scroll;
 }
 
